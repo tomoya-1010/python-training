@@ -37,3 +37,81 @@ s.discard(100) #要素削除、指定した要素なくてもエラーになら�
 print(s) # {1, 3, 4, 5}
 
 
+#setの集合演算
+
+#union 和集合
+
+s1 = {'A', 'B', 'C'}
+s2 = {'C', 'D', 'E'}
+s = s1.union(s2) # s1とs2をunionする
+print(s) # {'E', 'D', 'C', 'B', 'A'}
+print(s1) # {'B', 'A', 'C'} 変更なし
+s1.add('F')
+s2.remove('C')
+s = s1.union(s2)
+print(s)
+
+#Intersection(積集合)
+
+s1 = {'A', 'B', 'C', '1', '2A'}
+s2 = {'C', 'D', 'E', '2A'}
+s = s1.intersection(s2)
+print(s) # {'C'}
+
+a1 = {'a','b','c'}
+a2 = {'d','e','f','a'}
+a3 = {'e', 'f'}
+a1.add('k')
+
+b = a1.union(a2)
+c = b.intersection(a3)
+print(b)
+print(c)
+
+#difference (差集合)
+
+s1 = {'A', 'B', 'C'}
+s2 = {'C', 'D', 'E'}
+ # s1 - s2
+s = s1.difference(s2)
+print(s) # {'B', 'A'}
+ # s2 - s1
+s = s2.difference(s1)
+print(s) # {'D', 'E'}
+
+#包含判定 issubset
+
+s1 = {'A', 'B'}
+s2 = {'A', 'B', 'C'}
+t = {'D'}
+s1.add('D')
+s2.add('D')
+s2.remove('A')
+s3 = s1.intersection(s2)
+print(s3)
+print(t)
+print(t.issubset(s3))  #tはs3の部分集合であるのでtrue
+
+#含んでいるかどうかを判定　superset
+
+s1 = {'A', 'B', 'C', 'D'}
+print(s1)
+print(s2)
+print(s1.issuperset(s2)) #s2はs1の部分集合、s2はs1に含まれるのでtrue
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
