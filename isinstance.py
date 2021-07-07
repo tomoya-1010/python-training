@@ -47,3 +47,4 @@ sample(1.1)
 sample([1, 2, 3])
 sample({100, 200})
 sample({'key': 100})
+
