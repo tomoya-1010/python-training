@@ -13,4 +13,4 @@ b3 = (k == l)
 
 print(b1) # True
 print(b2) # False
-print(b3)
+print(b3) # true
