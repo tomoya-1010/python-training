@@ -14,7 +14,6 @@ data_list = [5, 3, 7, 4, 10, 9, 6]
 new_list = [num * 2 for num in data_list]
 print(new_list) # [10, 6, 14, 8, 20, 18, 12]
 
-
 #ある数値のリストが与えられていたとします。
 #このリストに対し、
 # ①各要素に対し、②偶数番目の要素を抜き出し、③2倍した結果」
@@ -32,5 +31,8 @@ print (new_list)
 "リスト内包表記"
 data_list = [5,3,4,7,9,10,6]
 new_list = [num * 2 for num in data_list if num % 2 == 0 ]
+
+
+
 
 
